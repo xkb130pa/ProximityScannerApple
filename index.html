@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Proximity Scanner</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"> 
+	<link rel="styleSheet" href="css/index.css" />
+	<link rel="styleSheet" href="css/custom.css" /> 
+
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/geolocation.js"></script>
+
+  </head>
+  <body>
+  
+     <div id="DisclaimerDialog" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="false">
+          <div class="ui-content" role="main">
+              <p id="DisclaimerText">Proximity Scanner is a tool to determine if discharge of water to land is prohibited. If this app reports YES then DO NOT DISCHARGE.</p>
+              <a class="ui-btn ui-corner-all ui-shadow ui-btn ui-btn-a" href="#" data-rel="back">OK</a>
+          </div>
+     </div>
+
+     <div id="AccuracyAlertDialog" data-role="popup" data-theme="a" data-overlay-theme="a" data-dismissible="false">
+          <div class="ui-content" role="main">
+              <p id="AccuracyAlert">The geolocation accuracy reported from your mobile device is poor.  Are you outside with clear visibility? Please attempt scanning again at a new location.</p>
+              <a class="ui-btn ui-corner-all ui-shadow ui-btn ui-btn-a" href="#" data-rel="back">OK</a>
+          </div>
+     </div>
+	 
+    <div id="Header">
+		<div id="Version">Ver 1.05</div>
+		<h3>Proximity Scanner</h3>
+    </div>
+
+    <div id="Content">
+
+		<div id="Security">
+			<p id="Directions">Please press the button below.</p>
+		</div> 
+		
+		<div id="Center" style="text-align:center;">
+			<div id="ResponseBlock">
+				<div id="Response"></div>
+				<div id="ResponseDescription"></div>
+			</div> 
+
+			<a id="Button" class=".ui-btn-inner .ui-btn-text Z0NoImage" data-role="button" data-inline="true" onclick="ScanCallback();" >Press Here</a>
+		</div>
+		
+
+
+		<div id="Coordinates">Your Location:<br/>
+		 Latitude:<span id="Latitude">...</span>,&nbsp;
+		 Longitude:<span id="Longitude">...</span>,&nbsp;
+		 Accuracy:<span id="Accuracy">...</span>
+	    </div>
+
+	</div>
+	
+    <div id="ResponseTime"></div>
+
+    <div id="Status">Status will appear here.</div>
+  </body>
+</html>
