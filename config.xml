@@ -76,7 +76,8 @@
   <gap:splash src="screen-ipad-landscape-2x.png" width="2008" height="1536"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   <access origin="*"/>
-  <plugin name="cordova-plugin-whitelist" source="pgb" version="1"//>
+  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+  
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
