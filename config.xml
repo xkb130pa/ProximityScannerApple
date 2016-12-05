@@ -25,7 +25,7 @@
   <gap:plugin name="org.apache.cordova.console"/>
   <gap:plugin name="org.apache.cordova.contacts"/>  
   -->
-  <gap:plugin name="org.apache.cordova.device" source="pgb"/>
+  <plugin name="org.apache.cordova.device" source="pgb"/>
   <!--
   <gap:plugin name="org.apache.cordova.device-motion"/>
   <gap:plugin name="org.apache.cordova.device-orientation"/>
